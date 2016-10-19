@@ -17,9 +17,9 @@ See the QQuickLicence at www.qquick.org/licence.html for details.
 # All options have default value False
 #====================================================================================================
 
-obfuscate_strings = True		# Don't rely on this for sensitive information
-obfuscated_name_tail = '_opy_'	# Will be added to all obfuscated names to avoid clashes with plain names
-plain_marker = '_opy_'			# Strings or comments containing this marker will not be obfuscated
+obfuscate_strings = False		# Don't rely on this for sensitive information
+obfuscated_name_tail = '_jhd_'	# Will be added to all obfuscated names to avoid clashes with plain names
+plain_marker = '_jhd_'			# Strings or comments containing this marker will not be obfuscated
 
 
 
@@ -31,7 +31,6 @@ plain_marker = '_opy_'			# Strings or comments containing this marker will not b
 
 source_extensions = '''
 py
-pyx
 '''
 
 
@@ -54,15 +53,32 @@ pyc
 #====================================================================================================
 
 external_modules = '''
+*
+collections
+bson
 re
+random
+functools
+abc
+uuid
+bsddb
+urllib
+urllib2
+itertools
+json
+math
+MySQLdb
 os
 sys
-errno
-keyword
-importlib
-random
-codecs
-shutil
+pymongo
+pymongo.operations
+pony
+pony.orm
+time
+datetime
+ConfigParser
+gzip
+traceback
 '''
 
 
@@ -86,5 +102,56 @@ opy_config.txt
 
 plain_names = '''
 opy
+Config
+ipdata
+coordinate
+mysqldb
+mongodb
+mongodbIndex
+mongodbRetention
+jhkj123
+setdefaultencoding
+UserActive
+uvfile
+hbtv.uvfile
+UserEvent
+hbtv.UserActive
+yyyymmdd
+hhmm
+datatype
+apptype
+last
+document_class
+tz_aware
+connect
+maxPoolSize
+socketTimeoutMS
+connectTimeoutMS
+serverSelectionTimeoutMS
+waitQueueTimeoutMS
+waitQueueMultiple
+socketKeepAlive
+host
+port
+user
+password
+database
 currentModule
+'''
+
+#====================================================================================================
+# exclude path:
+# Extra identifiers and path names (just for path) that should be ignore
+#====================================================================================================
+
+exclude_paths = '''
+/.svn/
+/.idea/
+/Alarm/
+/Collector/
+/IPService/
+/Obfuscation/
+/Transform/
+/Tests/
+/readme
 '''
