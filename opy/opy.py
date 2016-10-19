@@ -58,10 +58,8 @@ if __name__ == '__main__':
 
 
     def getObfuscatedName(obfuscationIndex, name):
-
-
         result = '{0}{1}{2}'.format(
-            '__' if name.startswith('__') else '_' if name.startswith('_') else 'l',
+            '__' if name.startswith('__') else '_' if name.startswith('_') else 'L',
             bin(obfuscationIndex)[2:].replace('0', 'l'),
             obfuscatedNameTail
         )
